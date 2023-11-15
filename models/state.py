@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 """ holds class State"""
 import models
+from models import storage
 from models.base_model import BaseModel, Base
 from models.city import City
-from os import getenv
-import sqlalchemy
-from sqlalchemy import Column, String, ForeignKey
+from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
 
 
@@ -17,4 +16,15 @@ class State(BaseModel, Base):
         cities = relationship("City", backref="state")
     else:
         name = ""
-	cites = []
+        cites = []
+
+
+if models.storage_t != 'db':
+    @property
+    def cities(self):
+        """
+        Returns the list of City instances with state_id equals
+        to the current State.id
+        """
+        return [city for city in storage.all(City).values()
+                if city.state_id == self.id]
