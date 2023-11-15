@@ -29,7 +29,8 @@ def c_text(text):
 @app.route('/python/', defaults={'text': 'is cool'}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python_text(text):
-    """Displays 'Python <text>', with underscores in <text> replaced by spaces."""
+    """Displays 'Python <text>', with underscores in
+    <text> replaced by spaces."""
     text = text.replace('_', ' ')
     return "Python " + text
 
