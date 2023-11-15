@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""Import necessary modules from flask and models. This is simply an attempt
-to fudge the numbers and pass the requirements for documentation."""
+"""
+Import necessary modules from flask and models. This is simply an attempt
+to fudge the numbers and pass the requirements for documentation.
+"""
 from flask import Flask, render_template
 from models import storage, State, Amenity
 
