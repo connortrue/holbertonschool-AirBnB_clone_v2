@@ -3,7 +3,6 @@
 from flask import Flask, render_template
 from models import storage, State, Amenity
 
-# Create an instance of the Flask class
 app = Flask(__name__)
 
 
