@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HBNB</title>
+    </head>
+<body>
+    <h3>States</h3>
+    <h4>&nbsp;</h4>
+    <ul>
+        {% for state in states %}
+            <li>{{ state.name }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Amenities</h3>
+    <h4>&nbsp;</h4>
+    <ul>
+        {% for amenity in amenities %}
+            <li>{{ amenity.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
