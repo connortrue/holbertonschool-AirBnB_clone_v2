@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-# Import necessary modules from flask and models
+"""Import necessary modules from flask and models"""
 from flask import Flask, render_template
 from models import storage, State
 
-# Create an instance of the Flask class
 app = Flask(__name__)
 
 
